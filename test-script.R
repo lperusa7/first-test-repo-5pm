@@ -1,7 +1,9 @@
 library(tidyverse)
 library(lterdatasampler)
-
 ggplot(data = pie_crab,
        aes(x = latitude,
-           y = size)) +
+           y = size,
+           color = latitude)) +
   geom_point()
+scale_color_gradient(low = "#923345",
+                     high = "923403")
